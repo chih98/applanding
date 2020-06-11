@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { Helmet } from 'react-helmet';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Helmet>
+      <title>AppLanding | Waitlist</title>
+    </Helmet>
     <App />
   </React.StrictMode>,
   document.getElementById('root')

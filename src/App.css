@@ -5,7 +5,7 @@
 body {
   display: flex;
   flex-grow: 1;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 
   text-align: center;
@@ -27,6 +27,10 @@ h1.title {
   margin-bottom: 0;
 }
 
+div.description {
+  max-width: 55vw;
+}
+
 div.waitlist {
   margin-top: 15px;
   margin-bottom: 10vh;
@@ -35,6 +39,7 @@ div.waitlist {
   background-color: transparent;
   border-radius: 25px;
   height: 50px;
+  min-height: 50px;
 }
 
 input.waitlist {
@@ -70,7 +75,7 @@ input.waitlist:hover {
 button.waitlist {
   height: auto;
 
-  background-color: #1ca4f7;
+  background-color: transparent;
 
   border-width: 1px 1px 1px 0px;
   border-color: #3C3C434A;
@@ -88,6 +93,10 @@ button.waitlist {
   cursor: pointer;
 }
 
+button.waitlist:active {
+  color: rgb(202, 202, 202);
+}
+
 button.waitlist:hover {
   filter: saturate(1.5);
 }
@@ -97,6 +106,11 @@ button.waitlist:hover {
   -webkit-transition: all 250ms ease-in-out;
   -moz-transition: all 250ms ease-in-out;
   -o-transition: all 250ms ease-in-out;
+}
+
+.parallax {
+  width: 300px;
+  height: 300px;
 }
 
 
@@ -122,7 +136,35 @@ button.waitlist:hover {
 
 @media only screen and (max-width: 1400px) {
   div.waitlist {
-    margin-top: 10%;
+    margin-top: 8%;
+  }
+
+  div.description {
+    margin-top: -10vh;
+  }
+
+  .App {
+    padding-bottom: 24px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    margin-top: -5vh;
+  }
+
+  div.description {
+    max-width: 95vw;
+  }
+
+  button.waitlist {
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-height: 1000px) {
+  div.description {
+    margin-top: 0;
   }
 }
 
